@@ -23,7 +23,7 @@ const MovieDetail: React.FC = () => {
   useEffect(() => {
     if (id) {
       const fetchMovie = async () => {
-        const response = await axios.get(`${API_BASE_URL}/${id}`, {
+        const response = await axios.get(`${API_BASE_URL}/movies/${id}`, {
           headers: {
             'X-TOKEN-ACCESS': API_TOKEN,
           }
