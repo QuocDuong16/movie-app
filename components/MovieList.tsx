@@ -20,7 +20,7 @@ const MovieList: React.FC = () => {
 
   useEffect(() => {
     debouncedFetchMovies();
-  }, []);
+  }, [debouncedFetchMovies]);
 
   async function fetchMovies() {
     try {

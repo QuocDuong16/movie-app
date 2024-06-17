@@ -22,7 +22,7 @@ const MovieListSearch: React.FC = () => {
     if (searchTerm.trim() !== "") {
         debouncedFetchMoviesSearch(searchTerm);
     }
-  }, [searchTerm]); // Trigger effect on searchTerm or isSearching change
+  }, [searchTerm, debouncedFetchMoviesSearch]);
 
   async function fetchMoviesSearch(searchTerm: string) {
     try {
